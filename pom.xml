@@ -8,6 +8,7 @@
   <name>Maven Hello World</name>
   <description>Maven Hello World example</description>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -21,4 +22,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
