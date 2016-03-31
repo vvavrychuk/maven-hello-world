@@ -51,6 +51,24 @@
           </archive>
         </configuration>
       </plugin>
+      <plugin>
+        <!-- Use assembly:signal goal. -->
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>kom.App</mainClass>
+            </manifest>
+          </archive>
+
+          <!-- We can write our own assembly descriptors but we do not want to.
+               We use descriptor provided by plugin:
+               https://github.com/apache/maven-plugins/blob/trunk/maven-assembly-plugin/src/main/resources/assemblies/jar-with-dependencies.xml -->
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
