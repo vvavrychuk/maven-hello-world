@@ -1,0 +1,1 @@
+console: java -jar target/maven-hello-world-1.0-SNAPSHOT.jar
