@@ -52,7 +52,7 @@
         </configuration>
       </plugin>
       <plugin>
-        <!-- Use assembly:signal goal. -->
+        <!-- Use assembly:single goal. -->
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
           <archive>
